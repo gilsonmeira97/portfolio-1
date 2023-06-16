@@ -755,6 +755,7 @@ textarea {
     .main-line {
         display: flex;
         flex-direction: column;
+        margin-bottom: 50px;
     }
 
     .container-main > :nth-child(2) {
@@ -762,12 +763,45 @@ textarea {
     }
 
     .line-description {
-        margin-top: 15px;
+        margin-top: 30px;
     }
 
     .bottom-container {
         grid-template-columns: 1fr;
         grid-row-gap: 20px;
     }
+
+    .main-section {
+        margin-top: 25px;
+    }
+
+    .main-footer {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .main-footer > :nth-child(1) {
+        flex-basis: 50%;
+    }
+
+    .main-footer > :nth-child(2) {
+        justify-content: end;
+        flex-basis: 50%;
+    }
+
+    .main-footer > :nth-child(3) {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+    .footer-links > ul {
+        padding: 0;
+    }
+
+    .footer-links > ul > li {
+        text-align: center;
+    }
+    
   }
   
