@@ -34,6 +34,23 @@ header span img {
 }
 
 /* Navigate menu */
+.menu-toggle {
+    display: none;
+    position: relative;
+    cursor:pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: #000;
+    transition: transform 0.3s ease-in-out;
+}
 
 .main-ul {
     padding: 0;
@@ -864,6 +881,61 @@ textarea {
 
     .form-contact > :first-child > :first-child {
         margin: 0px 0px 20px 0px;
+    }
+
+    .container-header > .social-medias {
+        display: none;
+    }
+
+    .main-ul li {
+        display: block;
+    }
+
+    /*Toggle menu*/
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .main-ul {
+        display: none;
+        flex-direction: column;
+        margin-top: 28px;
+        width: 0%;
+        right: 0px;
+        position: absolute;
+        z-index: 1000;
+    }
+
+    .main-ul.open {
+        display: flex;
+        width: 100%;
+    }
+
+    .main-ul > li {
+        background-color: #79c3aa;
+        color: white;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .bar.active:nth-child(1) {
+        position: relative;
+        top: 8px;
+        transform: rotate(45deg);
+    }
+      
+    .bar.active:nth-child(2) {
+        transform: rotate(45deg);
+    }
+      
+    .bar.active:nth-child(3) {
+        position: relative;
+        bottom: 8px;
+        transform: rotate(-45deg);
     }
 
   }
