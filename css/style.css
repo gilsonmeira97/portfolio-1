@@ -20,6 +20,7 @@ header {
 .container-header {
     box-sizing: border-box;
     width: 1230px;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,8 +90,11 @@ header span img {
 
 /* Navigate carrousel */
 
-.carousel-item {
-    height: 30vw;
+.carousel-item > img {
+    height: 580px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Body boxes */
@@ -190,7 +194,7 @@ h2 {
     position: relative;
     box-sizing: border-box;
     height: 420px;
-    border: 1px solid rgb(214, 214, 214);
+    border: 1px solid #ddd;
     padding: 45px 30px;
 }
 
@@ -259,6 +263,7 @@ footer{
 
 footer > div:last-child {
     padding: 10px 0px;
+    font-size: 0.9rem;
     font-weight: 300;
 }
 
@@ -334,9 +339,10 @@ footer > div:last-child {
 
 .banner-area h2 {
     font-family: 'Helvetica', sans-serif;
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 700;
     position: relative;
+    text-align: center;
     color: white;
 }
 
@@ -565,7 +571,6 @@ width: 100%;
 .line-form {
     display: flex;
     justify-content: space-between;
-    height: 45px;
     margin-bottom: 20px;
 }
 
@@ -747,9 +752,19 @@ textarea {
 /* Media query */
 
 @media (max-width: 768px) {
+    .products-area {
+        margin-bottom: 35px;
+    }
+
+    .products-description {
+        padding: 0px 15px;
+    }
+
     .products-list {
         grid-template-columns: 1fr;
         padding: 0px 15px;
+        grid-row-gap: 30px;
+        margin-bottom: 75px;
     }
 
     .main-line {
@@ -772,7 +787,7 @@ textarea {
     }
 
     .main-section {
-        margin-top: 25px;
+        margin-top: 50px;
     }
 
     .main-footer {
@@ -802,6 +817,54 @@ textarea {
     .footer-links > ul > li {
         text-align: center;
     }
-    
+
+    .carousel-item > img {
+        height: 300px;
+    }
+
+    .about-area > p {
+        margin: 0px 20px;
+    }
+
+    .about-boxes {
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+        padding: 13px;
+    }
+
+    .bottom-container {
+        padding: 0px 13px 80px 13px;
+    }
+
+
+    .form-contact{
+        padding: 0px 13px;
+    }
+
+    .contact-area > p {
+        margin: 0px 20px;
+    }
+
+    .contact-boxes {
+        grid-template-columns: 1fr;
+        grid-row-gap: 15px;
+    }
+
+    .contact-box {
+        margin: 0px 13px;
+    }
+
+    .box-line-form {
+
+    }
+
+    .line-form {
+        flex-direction: column;
+    }
+
+    .form-contact > :first-child > :first-child {
+        margin: 0px 0px 20px 0px;
+    }
+
   }
   
